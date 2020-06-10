@@ -7,7 +7,7 @@ export default function Calculator() {
 
   return (
     <div>
-    <h1 className="text-yellow-400 flex justify-center text-3xl mt-20">Simple Calculator</h1>
+    <h1 className="text-yellow-500 flex justify-center text-3xl mt-20">Simple Calculator</h1>
       <div className='flex justify-center text-3xl'>
         <div className='w-64 mt-5  border-2 p-5 rounded-lg'>
           <input
