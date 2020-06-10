@@ -1,3 +1,5 @@
+import 'Style/Style.scss'
+
 import Calculator from 'Hooks-Practice/Calculator'
 import ComponentState from 'Hooks-Practice/ComponentState'
 import React from 'react'
