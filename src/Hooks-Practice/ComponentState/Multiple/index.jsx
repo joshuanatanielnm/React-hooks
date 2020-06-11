@@ -1,4 +1,4 @@
-import React, { useState } from 'Hooks-Practice/ComponentState/Multiple/node_modules/react'
+import React, { useState } from 'react'
 
 export default function Multiple() {
   const [countA, setCountA] = useState(0)

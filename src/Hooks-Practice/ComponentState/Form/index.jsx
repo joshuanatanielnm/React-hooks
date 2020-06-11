@@ -1,4 +1,4 @@
-import React, { useState } from 'Hooks-Practice/ComponentState/Form/node_modules/react'
+import React, { useState } from 'react'
 
 export default function Form() {
   const [value, setValue] = useState('world')

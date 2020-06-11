@@ -1,13 +1,16 @@
 import 'Style/Style.scss'
 
-import Calculator from 'Hooks-Practice/Calculator'
-import ComponentState from 'Hooks-Practice/ComponentState/Object'
+import Calculator from 'Hooks-Practice/ComponentState/Calculator'
+import Multiple from 'Hooks-Practice/ComponentState/Multiple'
+import Object from 'Hooks-Practice/ComponentState/Object'
 import React from 'react'
 
 function App() {
   return (
     <div className='App'>
-      <Calculator />
+      <Multiple/>
+      {/* <Object/>
+      <Calculator/> */}
     </div>
   )
 }
