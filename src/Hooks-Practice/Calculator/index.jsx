@@ -30,12 +30,11 @@ export default function Calculator() {
             Operator.map(oprt => <button
               className='bg-blue-300 rounded-lg cursor-pointer hover:bg-blue-400 col-span-1'
               value={oprt} key={oprt}
-              onClick={(e) => oprt === '=' ? setValue(String(eval(value))) :setValue(value + e.target.value)}
+              onClick={(e) => oprt === '=' ? setValue(String(eval(value))) : setValue(value + e.target.value)}
             >
             {oprt}
             </button> )
           }
-
           </div>
         </div>
       </div>
