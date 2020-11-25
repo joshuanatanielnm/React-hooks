@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 
-export default function Object() {
-  const [list, setList] = useState([
-    { text: 'test' },
+export default function Aobject() {
+  const [Todo, setTodo] = useState([
+    { text: 'Persiapan slide' },
+    { text: 'Persiapan Praktikum' },
   ])
   const [value, setValue] = useState('')
-  const addValueToList = () => {
+  const addValueToTodo = () => {
     if (value.trim().length > 0) {
-      setList(prevList => [...prevList, { text: value }])
+      setTodo(prevTodo => [...prevTodo, { text: value }])
       setValue('')
     }
   }
   return (
     <div>
       <ul>
-        {list.map(({ text }) => (
+        {Todo.map(({ text }) => (
           <li key={text}>{text}</li>
         ))}
       </ul>
@@ -22,8 +23,9 @@ export default function Object() {
         type='text'
         value={value}
         onChange={v => setValue(v.target.value)}
+        className="border-2"
       />
-      <button onClick={addValueToList}>Add</button>
+      <button onClick={addValueToTodo}>Add</button>
     </div>
   )
 }

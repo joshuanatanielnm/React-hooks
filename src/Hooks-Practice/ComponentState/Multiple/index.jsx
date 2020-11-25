@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function Multiple() {
   const [countA, setCountA] = useState(0)
-  const [countB, setCountB] = useState(1)
+  const [countB, setCountB] = useState(0)
   return (
     <div>
       <p>You clicked {countA} times</p>
