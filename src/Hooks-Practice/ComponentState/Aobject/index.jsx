@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Aobject() {
   const [Todo, setTodo] = useState([
     { text: 'Persiapan slide' },
     { text: 'Persiapan Praktikum' },
   ])
+
   const [value, setValue] = useState('')
+
+  useEffect(() => {
+    console.log('My First Effect')
+  })
+
+  useEffect(() => {
+    console.log(`changes ${value}`)
+  }, [value])
   const addValueToTodo = () => {
     if (value.trim().length > 0) {
-      setTodo(prevTodo => [...prevTodo, { text: value }])
+      setTodo((prevTodo) => [...prevTodo, { text: value }])
       setValue('')
     }
   }
@@ -22,8 +31,8 @@ export default function Aobject() {
       <input
         type='text'
         value={value}
-        onChange={v => setValue(v.target.value)}
-        className="border-2"
+        onChange={(v) => setValue(v.target.value)}
+        className='border-2'
       />
       <button onClick={addValueToTodo}>Add</button>
     </div>
