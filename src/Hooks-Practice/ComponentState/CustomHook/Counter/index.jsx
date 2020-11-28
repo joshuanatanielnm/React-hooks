@@ -1,30 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react'
+import useCounter from './../useCounter'
 
 export default function Counter() {
-  const [state, setState] = useState({
-    like:0,
-    dislike:0
-  });
-  const handlelike = () =>{
-    setState(prev => ({
-      like: prev.like + 1
-    }))
-  }
-  const handleTripleLike = () => {
-    handlelike();
-    handlelike();
-    handlelike();
-  }
+  const [like, handleLike, handleTriple] = useCounter(0)
   return (
     <div>
       <p>
-        <button onClick={handlelike}> Like </button>
-        <span> {state.like} </span>
+        <button onClick={handleLike}> Like </button>
+        <span> {like} </span>
       </p>
       <p>
-        <button onClick={handleTripleLike}> Triple Like</button>
-        <span> {state.like}</span>
+        <button onClick={handleTriple}> Triple Like</button>
+        <span> {like}</span>
       </p>
     </div>
-  );
+  )
 }

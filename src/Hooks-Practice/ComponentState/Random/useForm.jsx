@@ -1,7 +1,11 @@
-import { usestate } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useForm = (initialValue) => {
-  const [value, setValue] = usestate(initialValue)
+  const [value, setValue] = useState(initialValue)
+
+  useEffect(() => {
+    console.log('triggered' + value + value.target)
+  }, [value])
 
   return [
     value,

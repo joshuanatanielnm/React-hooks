@@ -1,19 +1,17 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-export default function useCounter(defaultValue){
-  const [state, setState] = useState(defaultValue);
+function useCounter(defaultValue) {
+  const [state, setState] = useState(defaultValue)
   const handleCounter = () => {
-    setState(currentState => currentState + 1)
+    setState((currentState) => currentState + 1)
   }
   const handleTriple = () => {
-    handleCounter();
-    handleCounter();
-    handleCounter();
-  };
+    handleCounter()
+    handleCounter()
+    handleCounter()
+  }
 
-  return [
-    state,
-    handleCounter,
-    handleTriple
-  ]
+  return [state, handleCounter, handleTriple]
 }
+
+export default useCounter
