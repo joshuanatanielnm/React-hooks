@@ -1,3 +1,5 @@
+import './Style/main.css'
+
 import Aobject from 'Hooks-Practice/ComponentState/Aobject'
 import Calculator from 'Hooks-Practice/ComponentState/Calculator'
 import Counter from 'Hooks-Practice/ComponentState/CustomHook/Counter'

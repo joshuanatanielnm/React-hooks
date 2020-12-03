@@ -9,16 +9,19 @@
     "autoprefixer": "^10.0.3",
     "node-sass": "^4.0.0",
     "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "tailwindcss": "^2.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/Style/tailwind.css -o src/Style/main.css",
+    "watch:css": "postcss src/Style/tailwind.css -o src/Style/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"

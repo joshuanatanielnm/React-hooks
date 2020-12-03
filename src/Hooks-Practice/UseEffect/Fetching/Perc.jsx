@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useref } from 'react'
 
 export default function Perc() {
+  const renders = useref(0)
+
+  console.log(`Hello renders ${renders.current++}`)
   useEffect(() => {
     console.log('mount')
 

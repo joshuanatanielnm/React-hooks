@@ -1,5 +1,3 @@
-import './Style/tailwind.css'
-
 import * as serviceWorker from './serviceWorker'
 
 import App from './App'
